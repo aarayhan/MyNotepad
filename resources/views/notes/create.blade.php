@@ -1,10 +1,10 @@
-<x-layouts.app title="New Note - MyNotepad">
+<x-layouts.app title="New Note - MyNPad">
     <div class="mb-6">
         <a href="{{ route('notes.index') }}" class="text-sm text-zinc-600 underline underline-offset-4 hover:text-zinc-950">Back to notes</a>
         <h1 class="mt-3 text-3xl font-semibold tracking-tight text-zinc-950">New Note</h1>
     </div>
 
-    <div class="rounded-lg border border-zinc-200 bg-white p-6">
+    <div class="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/40">
         <form method="POST" action="{{ route('notes.store') }}" class="space-y-5">
             @csrf
 
@@ -25,8 +25,8 @@
             </div>
 
             <div class="flex flex-col gap-3 sm:flex-row">
-                <button type="submit" class="rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800">Save note</button>
-                <a href="{{ route('notes.index') }}" class="rounded-md border border-zinc-300 px-4 py-2 text-center text-sm font-medium text-zinc-700 hover:bg-zinc-100">Cancel</a>
+                <button type="submit" class="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800">Save note</button>
+                <a href="{{ route('notes.index') }}" class="rounded-lg border border-zinc-300 px-4 py-2 text-center text-sm font-medium text-zinc-700 hover:bg-zinc-100">Cancel</a>
             </div>
         </form>
     </div>

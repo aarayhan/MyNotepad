@@ -2,13 +2,13 @@
 
 ## Simple Explanation Script
 
-Good morning/afternoon. Our project is called MyNotepad. It is a simple personal notes application built with Laravel. We made this project to practice Laravel MVC, manual authentication, database relationships, and CRUD operations.
+Good morning/afternoon. Our project is called MyNPad. It is a simple personal notes application built with Laravel. We made this project to practice Laravel MVC, manual authentication, database relationships, and CRUD operations.
 
-The main purpose of MyNotepad is to let users register, login, and manage their own notes. After logging in, a user can create a note, view note details, edit the note, and delete it.
+The main purpose of MyNPad is to let users register, login, and manage their own notes. After logging in, a user can create a note, view note details, edit the note, and delete it.
 
-## What MyNotepad Is
+## What MyNPad Is
 
-MyNotepad is a simple web app for writing and managing personal notes. It is not a complex productivity system. It focuses on basic features that are easy to understand and explain.
+MyNPad is a simple web app for writing and managing personal notes. It is not a complex productivity system. It focuses on basic features that are easy to understand and explain.
 
 ## Why We Made It
 

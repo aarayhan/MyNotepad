@@ -2,7 +2,7 @@
 
 ## Project Objective
 
-Build MyNotepad, a simple Laravel personal notes app where users can register, login, and manage their own notes.
+Build MyNPad, a simple Laravel personal notes app where users can register, login, and manage their own notes.
 
 ## Timeline
 

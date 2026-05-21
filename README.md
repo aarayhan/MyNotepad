@@ -1,6 +1,6 @@
-# MyNotepad
+# MyNPad
 
-MyNotepad is a simple personal notes web application built with Laravel. Registered users can write and manage their own text notes in one place.
+MyNPad is a simple personal notes web application built with Laravel. Registered users can write and manage their own text notes in one place.
 
 This project is made for a school final project and uses a beginner-friendly Laravel MVC structure without Breeze, Jetstream, Fortify, or any authentication starter kit.
 

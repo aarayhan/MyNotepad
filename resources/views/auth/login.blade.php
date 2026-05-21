@@ -1,5 +1,5 @@
-<x-layouts.app title="Login - MyNotepad">
-    <div class="mx-auto max-w-md rounded-lg border border-zinc-200 bg-white p-6">
+<x-layouts.app title="Login - MyNPad">
+    <div class="mx-auto max-w-md rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm shadow-zinc-200/40">
         <h1 class="mb-2 text-2xl font-semibold text-zinc-950">Login</h1>
         <p class="mb-6 text-sm text-zinc-600">Login to manage your notes.</p>
 
@@ -22,7 +22,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="w-full rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800">
+            <button type="submit" class="w-full rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800">
                 Login
             </button>
         </form>
