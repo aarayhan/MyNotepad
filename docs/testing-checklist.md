@@ -29,7 +29,7 @@ When using Laravel Herd, open the app at `http://mynotepad-final-p.test` or the 
 
 - Login first.
 - Open New Note page.
-- Create a note with title and content.
+- Create a note with title, category, and content.
 - Try creating a note without title.
 - Try creating a note without content.
 
@@ -43,7 +43,7 @@ When using Laravel Herd, open the app at `http://mynotepad-final-p.test` or the 
 
 - Open a note.
 - Click Edit.
-- Change the title and content.
+- Change the title, category, and content.
 - Save changes.
 - Confirm the updated note is displayed.
 

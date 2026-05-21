@@ -21,6 +21,7 @@
 - Notes dashboard
 - Total notes count
 - Notes list with title, preview, and updated date
+- Simple note category
 - Create new note
 - View note detail
 - Edit existing note

@@ -6,11 +6,11 @@
     <title>{{ $title ?? 'MyNPad' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-stone-50 text-zinc-900 antialiased">
-    <header class="border-b border-zinc-200 bg-white/95">
+<body class="min-h-screen bg-[#f7f3ec] text-zinc-900 antialiased">
+    <header class="border-b border-stone-200 bg-[#fffdf8]/95">
         <div class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
             <a href="{{ auth()->check() ? route('notes.index') : url('/') }}" class="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-zinc-950">
-                <span class="flex size-8 items-center justify-center rounded-lg border border-zinc-300 bg-zinc-50 text-sm">N</span>
+                <span class="flex size-8 items-center justify-center rounded-lg border border-emerald-200 bg-emerald-50 text-sm text-emerald-800">N</span>
                 MyNPad
             </a>
 
@@ -19,15 +19,15 @@
                     <span class="text-zinc-600">{{ auth()->user()->name }}</span>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="rounded-lg border border-zinc-300 px-3 py-2 text-zinc-700 hover:bg-zinc-100">
+                        <button type="submit" class="rounded-lg border border-stone-300 bg-white px-3 py-2 text-zinc-700 hover:bg-stone-100">
                             Logout
                         </button>
                     </form>
                 </div>
             @else
                 <nav class="flex gap-2 text-sm">
-                    <a href="{{ route('login') }}" class="rounded-lg border border-zinc-300 px-3 py-2 text-zinc-700 hover:bg-zinc-100">Login</a>
-                    <a href="{{ route('register') }}" class="rounded-lg bg-zinc-900 px-3 py-2 text-white hover:bg-zinc-800">Register</a>
+                    <a href="{{ route('login') }}" class="rounded-lg border border-stone-300 bg-white px-3 py-2 text-zinc-700 hover:bg-stone-100">Login</a>
+                    <a href="{{ route('register') }}" class="rounded-lg bg-emerald-700 px-3 py-2 text-white hover:bg-emerald-800">Register</a>
                 </nav>
             @endauth
         </div>

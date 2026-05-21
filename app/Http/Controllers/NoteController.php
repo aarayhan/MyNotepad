@@ -26,6 +26,7 @@ class NoteController extends Controller
     {
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
+            'category' => ['required', 'string', 'in:Personal,School,Work,Ideas,Other'],
             'content' => ['required', 'string'],
         ]);
 
@@ -55,6 +56,7 @@ class NoteController extends Controller
 
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
+            'category' => ['required', 'string', 'in:Personal,School,Work,Ideas,Other'],
             'content' => ['required', 'string'],
         ]);
 
