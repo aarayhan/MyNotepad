@@ -8,7 +8,7 @@
             </h1>
 
             <p class="mt-5 max-w-xl text-base leading-7 text-zinc-700">
-                MyNPad helps you save short notes, school reminders, ideas, and personal writing in one organized place.
+                MyNotepad helps you save short notes, school reminders, ideas, and personal writing in one organized place.
             </p>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
