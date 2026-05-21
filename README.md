@@ -1,58 +1,133 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MyNotepad
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+MyNotepad is a simple personal notes web application built with Laravel. Registered users can write and manage their own text notes in one place.
 
-## About Laravel
+This project is made for a school final project and uses a beginner-friendly Laravel MVC structure without Breeze, Jetstream, Fortify, or any authentication starter kit.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Team Members
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Member 1: Add name here
+- Member 2: Add name here
+- Member 3: Add name here
+- Member 4: Add name here
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+- Public landing page
+- Manual user registration
+- Manual user login and logout
+- Authenticated notes dashboard
+- Create, view, edit, and delete notes
+- Notes belong to the logged-in user
+- Users cannot access notes owned by another user
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tech Stack
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Laravel
+- Laravel Blade
+- Tailwind CSS
+- MySQL
+- PHP
+- Vite
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Installation Steps
 
-## Agentic Development
+1. Clone the repository.
+2. Run `composer install`.
+3. Run `npm install`.
+4. Copy `.env.example` to `.env`.
+5. Run `php artisan key:generate`.
+6. Start MySQL from Laravel Herd.
+7. Create a MySQL database named `mynotepad`.
+8. Update the database settings in `.env`.
+9. Run `php artisan migrate`.
+10. Run `npm run dev`.
+11. Open the Herd site in your browser.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Database Setup
 
-```bash
-composer require laravel/boost --dev
+Use these values in `.env` for a normal local MySQL setup:
 
-php artisan boost:install
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mynotepad
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+If your MySQL user has a password, put it in `DB_PASSWORD`.
 
-## Contributing
+## Run The Project
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+This project is inside the Laravel Herd folder, so Herd can serve it automatically. You do not need to run `php artisan serve` when using Herd.
 
-## Code of Conduct
+Start MySQL in Herd, then start Vite:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+npm run dev
+```
 
-## Security Vulnerabilities
+Open the app at:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```text
+http://mynotepad-final-p.test
+```
 
-## License
+If your Herd site name is different, use the URL shown in Herd.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+If a teammate is not using Herd, they can still run:
+
+```bash
+php artisan serve
+```
+
+## Folder Structure
+
+- `routes/web.php`: Web routes for landing page, auth, and notes.
+- `app/Http/Controllers/AuthController.php`: Manual registration, login, and logout logic.
+- `app/Http/Controllers/NoteController.php`: Notes CRUD logic.
+- `app/Models/User.php`: User model and notes relationship.
+- `app/Models/Note.php`: Note model and user relationship.
+- `database/migrations`: Database table definitions.
+- `resources/views`: Blade templates for pages and forms.
+- `resources/views/components/layouts/app.blade.php`: Shared page layout.
+- `docs`: Project planning, feature list, testing checklist, and presentation notes.
+
+## Manual Authentication
+
+This project does not use Laravel Breeze or any starter kit. Authentication is written manually with controllers, validation, sessions, `Hash`, and `Auth`.
+
+Passwords are hashed before saving because plain text passwords are unsafe. The notes routes use `auth` middleware so only logged-in users can open the dashboard and note pages.
+
+## Why `user_id` Is Important
+
+The `notes` table has a `user_id` column. This connects each note to the user who created it. The app uses this value to show only the logged-in user's notes and return `403` if a user tries to access someone else's note.
+
+## GitHub Workflow
+
+- `main`: stable code
+- `dev`: development branch
+- `feature/auth`: authentication work
+- `feature/notes-crud`: notes CRUD work
+- `feature/ui`: interface work
+- `feature/docs`: documentation work
+
+Example commit messages:
+
+- `init Laravel project structure`
+- `add manual authentication pages`
+- `add notes migration and model`
+- `add notes CRUD controller`
+- `improve dashboard UI`
+- `add testing checklist`
+- `update README documentation`
+
+## Screenshots
+
+Add screenshots here after the UI is finished.
+
+## Demo Video
+
+Add the demo video link here before submission.
