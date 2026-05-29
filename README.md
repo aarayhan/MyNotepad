@@ -6,10 +6,10 @@ This project is made for a school final project and uses a beginner-friendly Lar
 
 ## Team Members
 
-- Member 1: Add name here
-- Member 2: Add name here
-- Member 3: Add name here
-- Member 4: Add name here
+- Member 1: Muhammad Hideaki Isdianto
+- Member 2: Luthfan Ahmad Qiwam
+- Member 3: Muhammad Yahya Arrayhan
+- Member 4: Miftachul Azzam Al Mawardy
 
 ## Features
 
