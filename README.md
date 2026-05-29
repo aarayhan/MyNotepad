@@ -77,12 +77,6 @@ http://mynotepad-final-p.test
 
 If your Herd site name is different, use the URL shown in Herd.
 
-If a teammate is not using Herd, they can still run:
-
-```bash
-php artisan serve
-```
-
 ## Folder Structure
 
 - `routes/web.php`: Web routes for landing page, auth, and notes.
@@ -95,15 +89,6 @@ php artisan serve
 - `resources/views/components/layouts/app.blade.php`: Shared page layout.
 - `docs`: Project planning, feature list, testing checklist, and presentation notes.
 
-## Manual Authentication
-
-This project does not use Laravel Breeze or any starter kit. Authentication is written manually with controllers, validation, sessions, `Hash`, and `Auth`.
-
-Passwords are hashed before saving because plain text passwords are unsafe. The notes routes use `auth` middleware so only logged-in users can open the dashboard and note pages.
-
-## Why `user_id` Is Important
-
-The `notes` table has a `user_id` column. This connects each note to the user who created it. The app uses this value to show only the logged-in user's notes and return `403` if a user tries to access someone else's note.
 
 ## GitHub Workflow
 
@@ -113,21 +98,5 @@ The `notes` table has a `user_id` column. This connects each note to the user wh
 - `feature/notes-crud`: notes CRUD work
 - `feature/ui`: interface work
 - `feature/docs`: documentation work
-
-Example commit messages:
-
-- `init Laravel project structure`
-- `add manual authentication pages`
-- `add notes migration and model`
-- `add notes CRUD controller`
-- `improve dashboard UI`
-- `add testing checklist`
-- `update README documentation`
-
-## Screenshots
-
-Add screenshots here after the UI is finished.
-
-## Demo Video
 
 Add the demo video link here before submission.
